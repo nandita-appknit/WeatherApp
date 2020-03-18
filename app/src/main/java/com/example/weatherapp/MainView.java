@@ -2,9 +2,7 @@ package com.example.weatherapp;
 
 public interface MainView {
 
-    public String getcityname();
-
-    public void onButtonClicked();
+    public String getCityName();
 
     public void displayText();
 

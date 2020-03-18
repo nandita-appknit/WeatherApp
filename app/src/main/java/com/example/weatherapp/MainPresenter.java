@@ -15,7 +15,7 @@ public class MainPresenter {
         Retrofit retrofit = new Retrofit.Builder().baseUrl(BaseUrl).addConverterFactory(GsonConverterFactory.create()).build();
         weatherApi weather = retrofit.create(weatherApi.class);
         //  String text=cityname.getText().toString().trim();
-        Call<WeatherResponse> call = weather.getCurrentWeatherData(mainView.getcityname(), API);
+        Call<WeatherResponse> call = weather.getCurrentWeatherData(mainView.getCityName(), API);
         call.enqueue(new Callback<WeatherResponse>() {
             @Override
             public void onResponse(Call<WeatherResponse> call, Response<WeatherResponse> response) {
